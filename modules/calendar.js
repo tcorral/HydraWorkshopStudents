@@ -17,13 +17,26 @@
 			},
 			setBehavior: function () {
 				this.oCalendar.onSelectDate = function () {
+					bus.publish( 'schedule', 'events:byDay', {
+						year: this.nYearSelected,
+						month: this.nMonthSelected,
+						day: this.nDaySelected
+					} );
 				};
 				this.oCalendar.onChangeMonth = function () {
+					bus.publish( 'schedule', 'events:cleanList', {} );
+					bus.publish( 'schedule', 'events:byMonth', {
+						year: this.nYear,
+						month: this.nMonth,
+						day: this.nDay
+					} );
 				};
 			},
 			init: function () {
+				core.start( 'events_list' );
 				this.startCalendar();
 				this.setBehavior();
+				this.oCalendar.onChangeMonth();
 			}
 		};
 	} );
