@@ -15,8 +15,15 @@
 					.setDate( new Date() )
 					.insertIntoDOM();
 			},
+			setBehavior: function () {
+				this.oCalendar.onSelectDate = function () {
+				};
+				this.oCalendar.onChangeMonth = function () {
+				};
+			},
 			init: function () {
 				this.startCalendar();
+				this.setBehavior();
 			}
 		};
 	} );
