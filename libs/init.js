@@ -5,4 +5,5 @@
 		ns = win;
 	}
 	core.start('calendar');
+	Hydra.setDebug(true);
 }( window, document, App, Hydra.module ));
