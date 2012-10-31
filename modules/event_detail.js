@@ -43,6 +43,9 @@
 			init: function () {
 				this.oDetail = doc.getElementById( "detail" );
 				bus.subscribe( 'schedule', this );
+			},
+			onDestroy: function() {
+				bus.unsubscribe('schedule', this);
 			}
 		};
 	} );
