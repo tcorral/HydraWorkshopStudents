@@ -56,10 +56,21 @@
 			},
 			setBehavior: function () {
 				this.oList.addEventListener( 'click', function ( eEvent ) {
-
+					var oTarget = eEvent.target;
+					while ( oTarget !== document && oTarget.tagName.toLowerCase() !== 'li' ) {
+						oTarget = oTarget.parentNode;
+					}
+					if ( oTarget === document ) {
+						return false;
+					}
+					bus.publish( 'schedule', 'events:loadDetailInfo', {
+						id: oTarget.id
+					} );
+					return true;
 				} );
 			},
 			init: function () {
+				core.start( 'event_detail' );
 				this.oList = doc.getElementById( "events_list" );
 				bus.subscribe( 'schedule', this );
 				this.setBehavior();
