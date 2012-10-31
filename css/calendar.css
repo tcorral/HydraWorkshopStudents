@@ -1,0 +1,189 @@
+div.calendar_container
+{
+	background-color:#eeeeee;
+	float:left;
+	font-family:Arial,Helvetica,sans-serif;
+	padding-top:5px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:5px;
+	border:#cccccc 1px solid;
+}
+div.calendar_container,
+div.calendar_container input[type="button"]
+{
+	font-size:11px;
+}
+div.calendar_container div.calendar_header
+{
+	position:relative;
+	padding:0.2em 0;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+div.calendar_container div.prev a span,
+div.calendar_container div.next a span
+{
+	height:16px;
+	width:16px;
+	background-image:url(../images/ui-icons_222222_256x240.png);
+	display:block;
+	left:50%;
+	margin-left:-8px;
+	position:absolute;
+	top:50%;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	text-indent:-99999px;
+}
+div.calendar_container div.prev a,
+div.calendar_container div.next a
+{
+	display:block;
+}
+div.calendar_container div.prev a span
+{
+	background-position:-80px -192px;
+}
+div.calendar_container div.next a span
+{
+	background-position:-48px -192px;
+}
+div.calendar_container div.prev a:hover span,
+div.calendar_container div.next a:hover span
+{
+	background-color:#fff;
+}
+div.calendar_container div.prev,
+div.calendar_container div.next
+{
+	position:absolute;
+	top:4px;
+	width:1.8em;
+}
+div.calendar_container div.prev
+{
+	left:2px;
+}
+div.calendar_container div.next
+{
+	right:2px;
+}
+div.calendar_container div.month_year
+{
+	line-height:1.8em;
+	margin:0 2.3em;
+	text-align:center;
+}
+div.calendar_container div.month_year input
+{
+	display:none;
+	font-size:11px;
+}
+div.calendar_container div.month_year input.year
+{
+	width:35px;
+}
+div.calendar_container div.month_year input.month
+{
+	width:60px;
+	float:left;
+}
+div.calendar_container div.month_year span.month
+{
+	margin-right:3px;
+}
+div.calendar_container div.calendar_body div.week_days
+{
+	overflow:hidden;
+	margin-top:10px;
+}
+div.calendar_container div.calendar_body div.week_days div
+{
+	float:left;
+	width:24px;
+	height:21px;
+	text-align:center;
+	margin:2px;
+	border:transparent 1px solid;
+}
+div.calendar_container div.calendar_body div.week
+{
+	overflow:hidden;
+}
+div.calendar_container div.calendar_body div.week div
+{
+	float:left;
+	width:24px;
+	height:21px;
+	text-align:right;
+	margin:2px;
+	border:transparent 1px solid;
+}
+div.calendar_container div.calendar_body div.week div.day
+{
+	border:#cccccc 1px solid;
+	background-color:#fff;
+}
+div.calendar_container div.calendar_body div.week div.today
+{
+	font-weight:bold;
+	background-color:#F6A828;
+	float:left;
+	color:#fff;
+	text-align:right;
+	padding-top:3px;
+	padding-left:1px;
+	padding-right:1px;
+	cursor:default;
+	border:#F6A828 1px solid;
+	width:22px;
+	height:18px;
+}
+div.calendar_container div.calendar_body div.week div a
+{
+	color:#787878;
+	cursor:pointer;
+	display:block;
+	height:100%;
+	text-decoration:none;
+	width:100%;
+}
+div.calendar_container div.calendar_body div.week div a:hover
+{
+	font-weight:bold;
+	color:#fff;
+	background-color:#c9c9c9;
+}
+div.calendar_container div.calendar_body div.week div a span
+{
+	display:block;
+	padding-right:3px;
+	padding-top:3px;
+}
+div.calendar_container div.calendar_body div.week div.selected a
+{
+	font-weight:bold;
+	background-color:#F00;
+	color:#fff;
+}
+div.calendar_container div.calendar_header
+{
+	border:1px solid #E78F08;
+}
+div.calendar_container div.calendar_body div.week div.today,
+div.calendar_container div.calendar_header
+{
+	background-color:#F6A828;
+}
+div#calendarContainer
+{
+	float:left;
+	overflow: hidden;
+}
+form#formCalendarContainer
+{
+	float:left;
+	overflow:hidden;
+	width:218px;
+}
